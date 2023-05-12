@@ -1,0 +1,69 @@
+ **Task:** 
+ Create a Django REST framework API that allows users to create and manage accounts, follow other users, and post and view content in a social media app. 
+ **Requirements:** 
+ 1. Use Django REST framework to create a RESTful API that exposes endpoints for account creation, login, and content management. 
+ 2. Implement user authentication and authorization using JWT (json web tokens). 
+ 3. Implement user registration with email verification. 
+ 4. Implement user follow/unfollow functionality that allows users to follow other users and see their content. 
+ 5. Implement a user profile endpoint that allows users to update their profile with a profile picture and bio. 
+ 6. Implement content creation and management endpoints that allow users to create, edit, and delete their own posts, as well as view posts from the users they follow. 
+ 7. Implement endpoints for liking and commenting on posts. 
+ 8. Use Django's built-in middleware to handle request/response processing. 
+ 9. Use third-party libraries to handle authentication, database modeling, and endpoint validation. 
+ 10. Implement a feature that allows users to search for other users based on their username, email, or full name. 
+ 11. Implement notifications that allow users to receive real-time updates when someone follows them, likes their posts, or comments on their posts. 
+ 12. Implement a feature that allows users to block other users they do not want to interact with. 
+ 13. Implement hashtags and the ability to search posts based on hashtags. 
+ 14. Implement a feature that allows users to report posts that violate community guidelines. 
+ 15. Implement a follow suggestion feature that suggests users to follow based on their interests. 
+ 16. Implement an analytics feature that allows users to see how many views, likes, and comments their posts received. 
+ 17. Implement a feature that allows users to create and manage groups, and share posts with group members. 
+ 18. Implement an activity log that keeps track of all user actions, such as post creation and deletion, user follow and unfollow, and user blocking. 
+ 19. Implement a feature that allows users to upload videos and play them directly in the app.
+
+ 
+ **Deliverables:** 
+ 1. A fully functional Django REST framework API that allows users to create and manage accounts, follow other users, and post and view content in a social media app. 
+ 2. Complete documentation of the API, including endpoint descriptions, request/response formats, and error codes. 
+ 3. Instructions for configuring and deploying the API to a server. 
+ 4. Unit tests for all API endpoints, as well as integration tests that verify the API's performance and functionality as a whole. 
+ 5. A README file that describes the overall architecture of the API, as well as any technical limitations or dependencies that must be considered when using it. 
+ 6. A GitHub repository containing the API source code, documentation, and test suite.
+
+
+
+
+
+**Endpoints:**
++ 1. POST /api/users/ - create a new user account with email verification. 
++ 2. POST /api/users/login/ - log in to an existing account and receive a JWT token. 
++ 3. GET /api/users/ - get the current user profile information. 
++ 4. PATCH /api/users/ - update the current user profile information with a profile picture and bio. 
++ 5. GET /api/users/{user_id}/ - get the profile information for a specific user. 
++ 6. POST /api/users/{user_id}/follow/ - follow a specific user. 
++ 7. POST /api/users/{user_id}/unfollow/ - unfollow a specific user. 
++ 8. GET /api/users/{user_id}/posts/ - get the posts for a specific user. 
+9. GET /api/posts/ - get all posts from users that the current user follows. 
++ 10. POST /api/posts/ - create a new post. 
++ 11. GET /api/posts/{post_id}/ - get a specific post. 
++ 12. PATCH /api/posts/{post_id}/ - update a specific post. 
++ 13. DELETE /api/posts/{post_id}/ - delete a specific post. 
++ 14. POST /api/posts/{post_id}/like/ - like a specific post. 
++ 15. POST /api/posts/{post_id}/comments/ - comment on a specific post. 
++ 16. GET /api/posts/{post_id}/comments/ - get all comments for a specific post.
+
+
++ 1. GET /api/users/search/?query={search_query} - search for users based on username, email, or full name. 
+2. WebSocket /api/notifications/ - real-time notifications for new followers, likes, and comments. 
+3. POST /api/users/{user_id}/block/ - block a specific user. 
+4. GET /api/posts/search/?hashtag={hashtag} - search for posts based on hashtags. 
+5. POST /api/posts/{post_id}/report/ - report a specific post. 
+6. GET /api/posts/suggestions/ - get a list of suggested users to follow based on interests. 
+7. GET /api/posts/{post_id}/analytics/ - get the analytics for a specific post including views, likes, and comments. 
+8. POST /api/groups/ - create a new group. 
+9. GET /api/groups/{group_id}/ - get a specific group and its members. 
+10. WebSocket /api/activity-log/ - real-time activity log for all user actions. 
+11. POST /api/posts/videos/ - upload a video for a post. 
+12. GET /api/posts/videos/{video_id}/ - get a specific video for a post.
+
+

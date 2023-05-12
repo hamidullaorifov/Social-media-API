@@ -1,0 +1,152 @@
+[
+    {
+        "username": "johndoe123",
+        "first_name": "John",
+        "last_name": "Doe",
+        "bio": "Software Engineer"
+    },
+    {
+        "username": "sarahsmith456",
+        "first_name": "Sarah",
+        "last_name": "Smith",
+        "bio": "Marketing Manager"
+    },
+    {
+        "username": "mikejones789",
+        "first_name": "Mike",
+        "last_name": "Jones",
+        "bio": "Sales Representative"
+    },
+    {
+        "username": "emilybrown234",
+        "first_name": "Emily",
+        "last_name": "Brown",
+        "bio": "Graphic Designer"
+    },
+    {
+        "username": "davidlee567",
+        "first_name": "David",
+        "last_name": "Lee",
+        "bio": "Web Developer"
+    },
+    {
+        "username": "jessicawilson890",
+        "first_name": "Jessica",
+        "last_name": "Wilson",
+        "bio": "Project Manager"
+    },
+    {
+        "username": "kevinmiller123",
+        "first_name": "Kevin",
+        "last_name": "Miller",
+        "bio": "Accountant"
+    },
+    {
+        "username": "laurasmith789",
+        "first_name": "Laura",
+        "last_name": "Smith",
+        "bio": "Human Resources Manager"
+    },
+    {
+        "username": "chrisjackson456",
+        "first_name": "Chris",
+        "last_name": "Jackson",
+        "bio": "Business Analyst"
+    },
+    {
+        "username": "amandabrown234",
+        "first_name": "Amanda",
+        "last_name": "Brown",
+        "bio": "Social Media Manager"
+    },
+    {
+        "username": "jasonwilliams567",
+        "first_name": "Jason",
+        "last_name": "Williams",
+        "bio": "IT Support Specialist"
+    },
+    {
+        "username": "kellydavis890",
+        "first_name": "Kelly",
+        "last_name": "Davis",
+        "bio": "Customer Service Representative"
+    },
+    {
+        "username": "ericjohnson123",
+        "first_name": "Eric",
+        "last_name": "Johnson",
+        "bio": "Financial Analyst"
+    },
+    {
+        "username": "jenniferlee789",
+        "first_name": "Jennifer",
+        "last_name": "Lee",
+        "bio": "Marketing Coordinator"
+    },
+    {
+        "username": "matthewthomas456",
+        "first_name": "Matthew",
+        "last_name": "Thomas",
+        "bio": "Software Developer"
+    },
+    {
+        "username": "rebeccawilson234",
+        "first_name": "Rebecca",
+        "last_name": "Wilson",
+        "bio": "Content Writer"
+    },
+    {
+        "username": "brianmiller567",
+        "first_name": "Brian",
+        "last_name": "Miller",
+        "bio": "Sales Manager"
+    },
+    {
+        "username": "jessicabrown890",
+        "first_name": "Jessica",
+        "last_name": "Brown",
+        "bio": "Event Planner"
+    },
+    {
+        "username": "davidjones123",
+        "first_name": "David",
+        "last_name": "Jones",
+        "bio": "Web Designer"
+    },
+    {
+        "username": "sarahwilson789",
+        "first_name": "Sarah",
+        "last_name": "Wilson",
+        "bio": "Public Relations Specialist"
+    },
+    {
+        "username": "johndavis456",
+        "first_name": "John",
+        "last_name": "Davis",
+        "bio": "Operations Manager"
+    },
+    {
+        "username": "laurajohnson234",
+        "first_name": "Laura",
+        "last_name": "Johnson",
+        "bio": "Recruiter"
+    },
+    {
+        "username": "chrisbrown567",
+        "first_name": "Chris",
+        "last_name": "Brown",
+        "bio": "Marketing Director"
+    },
+    {
+        "username": "amandajones890",
+        "first_name": "Amanda",
+        "last_name": "Jones",
+        "bio": "Social Media Coordinator"
+    },
+    {
+        "username": "jasonmiller123",
+        "first_name": "Jason",
+        "last_name": "Miller",
+        "bio": "IT Manager"
+    }
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "owner": 1,
+    "content": "Just had an amazing workout at the gym!",
+    "tags": ["fitness", "exercise"]
+  },
+  {
+    "owner": 2,
+    "content": "Caught up with some old friends over coffee today",
+    "tags": ["friends", "social"]
+  },
+  {
+    "owner": 3,
+    "content": "Just finished reading an incredible book!",
+    "tags": ["books", "reading"]
+  },
+  {
+    "owner": 4,
+    "content": "I can't believe I finally graduated from college!",
+    "tags": ["education", "college", "achievement"]
+  },
+  {
+    "owner": 1,
+    "content": "Spent the day hiking in the mountains and it was absolutely beautiful!",
+    "tags": ["hiking", "nature", "adventure"]
+  },
+  {
+    "owner": 2,
+    "content": "I just adopted a new puppy and I'm in love!",
+    "tags": ["pets", "dogs"]
+  },
+  {
+    "owner": 3,
+    "content": "Preparing for a job interview tomorrow. Wish me luck!",
+    "tags": ["career", "job"]
+  },
+  {
+    "owner": 4,
+    "content": "Celebrating my birthday today!",
+    "tags": ["birthday", "celebration"]
+  },
+  {
+    "owner": 1,
+    "content": "Just got back from a relaxing vacation in Hawaii",
+    "tags": ["travel", "beach"]
+  },
+  {
+    "owner": 2,
+    "content": "I'm starting a new business and I'm super excited!",
+    "tags": ["career", "business"]
+  },
+  {
+    "owner": 3,
+    "content": "Volunteered at a local soup kitchen today",
+    "tags": ["volunteering", "charity"]
+  },
+  {
+    "owner": 4,
+    "content": "Attended a fun outdoor music festival today",
+    "tags": ["music", "festival", "outdoors"]
+  },
+  {
+    "owner": 1,
+    "content": "Started working on a new project today",
+    "tags": ["career", "project"]
+  },
+  {
+    "owner": 2,
+    "content": "I'm so grateful for all the amazing people in my life",
+    "tags": ["gratitude", "friends"]
+  },
+  {
+    "owner": 3,
+    "content": "I just finished writing my first novel!",
+    "tags": ["writing", "books", "achievement"]
+  },
+  {
+    "owner": 4,
+    "content": "Having a lazy day at home playing video games",
+    "tags": ["gaming", "relaxation"]
+  },
+  {
+    "owner": 1,
+    "content": "Just got a promotion at work and I'm thrilled!",
+    "tags": ["career", "achievement"]
+  },
+  {
+    "owner": 2,
+    "content": "Going on a road trip this weekend!",
+    "tags": ["travel", "adventure"]
+  },
+  {
+    "owner": 3,
+    "content": "I'm so proud of my kids for doing well in school!",
+    "tags": ["parenting", "education"]
+  },
+  {
+    "owner": 4,
+    "content": "Trying out a new recipe today in the kitchen",
+    "tags": ["cooking", "food"]
+  },
+  {
+    "owner": 1,
+    "content": "Just got back from a great date night with my partner",
+    "tags": ["love", "romance"]
+  },
+  {
+    "owner": 2,
+    "content": "Hiking with my dog is one of my favorite things to do",
+    "tags": ["hiking", "pets"]
+  },
+  {
+    "owner": 3,
+    "content": "I'm enjoying exploring new hobbies lately",
+    "tags": ["hobbies", "exploration"]
+  },
+  {
+    "owner": 4,
+    "content": "Finally finished my home renovation project!",
+    "tags": ["homeimprovement", "DIY"]
+  },
+  {
+    "owner": 1,
+    "content": "Can't wait for tomorrow's soccer game!",
+    "tags": ["sports", "soccer"]
+  },
+  {
+    "owner": 2,
+    "content": "I'm taking a digital detox this weekend and unplugging from social media",
+    "tags": ["technology", "digitaldetox"]
+  },
+  {
+    "owner": 3,
+    "content": "Just received an award for my volunteer work",
+    "tags": ["volunteering", "achievement"]
+  },
+  {
+    "owner": 4,
+    "content": "Spending the day at an amusement park with my friends!",
+    "tags": ["friends", "amusementpark"]
+  },
+  {
+    "owner": 1,
+    "content": "Starting a new fitness challenge today",
+    "tags": ["fitness", "challenge"]
+  },
+  {
+    "owner": 2,
+    "content": "Just watched an amazing documentary on Netflix",
+    "tags": ["documentary", "Netflix"]
+  },
+  {
+    "owner": 3,
+    "content": "I'm so excited to be starting a new job soon!",
+    "tags": ["career", "job"]
+  },
+  {
+    "owner": 4,
+    "content": "Got to attend a really cool virtual reality experience today",
+    "tags": ["technology", "virtualreality"]
+  },
+  {
+    "owner": 1,
+    "content": "Just finished a really intense workout and feeling amazing!",
+    "tags": ["fitness", "exercise"]
+  },
+  {
+    "owner": 2,
+    "content": "I'm a huge fan of all things Disney",
+    "tags": ["Disney", "entertainment"]
+  },
+  {
+    "owner": 3,
+    "content": "I've been learning a new language and it's been so much fun",
+    "tags": ["languagelearning", "hobbies"]
+  },
+  {
+    "owner": 4,
+    "content": "I'm really enjoying learning more about photography lately",
+    "tags": ["photography", "hobbies"]
+  },
+  {
+    "owner": 1,
+    "content": "I'm really excited about the new project I'm working on at work",
+    "tags": ["career", "project"]
+  },
+  {
+    "owner": 2,
+    "content": "I'm really into meditation lately and it's been really helpful for me",
+    "tags": ["meditation", "selfcare"]
+  },
+  {
+    "owner": 3,
+    "content": "I just finished my first 10k run!",
+    "tags": ["fitness", "achievement"]
+  },
+  {
+    "owner": 4,
+    "content": "Trying to teach myself how to play guitar",
+    "tags": ["music", "hobbies"]
+  },
+  {
+    "owner": 1,
+    "content": "Just got back from an amazing trip to Italy 🇮🇹",
+    "tags": ["travel", "Italy"]
+  },
+  {
+    "owner": 2,
+    "content": "Had a great time at the concert last night",
+    "tags": ["music", "concert"]
+  },
+  {
+    "owner": 3,
+    "content": "Just got back from a trip to the beach with my family",
+    "tags": ["travel", "beach", "family"]
+  }
+]
