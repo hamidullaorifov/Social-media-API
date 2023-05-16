@@ -89,14 +89,18 @@ class PostSuggestionsView(ListAPIView):
     serializer_class = PostSerializer
     def get_queryset(self):
         user = self.request.user
-        most_commented_posts = Post.objects.annotate(num_comments=Count('comments')).order_by('-num_comments')[:5]
-        most_liked_posts = Post.objects.annotate(num_likes=Count('likes')).order_by('-num_likes')[:5]
-        queryset = set(most_commented_posts) | set(most_liked_posts)
+        blocked_users = set()
+        followings_posts = []
         if not user.is_anonymous:
+            blocked_users = set(map(lambda x:x['blocked_user'],user.blocked_by_users.all().values('blocked_user')))
             followings = UserFollow.objects.filter(follower_user=user).values('following_user')
             followings_ids = set([value['following_user'] for value in followings])
-            followings_posts = Post.objects.filter(owner__pk__in=followings_ids)[:5]
-            queryset = queryset | set(followings_posts)
+            followings_posts = Post.objects.exclude(owner__pk__in=blocked_users).filter(owner__pk__in=followings_ids)[:5]
+        most_commented_posts = Post.objects.exclude(owner__pk__in=blocked_users).annotate(num_comments=Count('comments')).order_by('-num_comments')[:5]
+        most_liked_posts = Post.objects.exclude(owner__pk__in=blocked_users).annotate(num_likes=Count('likes')).order_by('-num_likes')[:5]
+        queryset = set(most_commented_posts) | set(most_liked_posts)
+        
+        queryset = queryset | set(followings_posts)
         return queryset
 
 

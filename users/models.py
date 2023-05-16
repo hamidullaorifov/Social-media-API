@@ -12,6 +12,10 @@ class UserFollow(models.Model):
     follower_user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='followers')
 
 
+class BlockUser(models.Model):
+    blocked_by = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blocked_by_users')
+    blocked_user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blocked_users')
+
 # class BlockUser(models.Model):
 #     user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blocked_by')
 #     blocked_user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blocked_users')

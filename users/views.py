@@ -12,7 +12,7 @@ from django.utils.decorators import method_decorator
 
 from .serializers import UserSerializer,ProfileSerializer
 from .permissions import IsOwnerOrReadOnly
-from .models import User,UserFollow
+from .models import User,UserFollow,BlockUser
 from posts.serializers import PostSerializer
 from posts.models import Post
 
@@ -45,14 +45,14 @@ class UserSearchView(ListAPIView):
 action_parameter = openapi.Parameter(
                 name='action',
                 in_=openapi.IN_PATH,
-                description='Action to perform (follow or unfollow)',
+                description='Action to perform (follow, unfollow, block, unblock)',
                 required=True,
                 type=openapi.TYPE_STRING,
-                enum=['follow', 'unfollow'],
+                enum=['follow', 'unfollow','block','unblock'],
                 default='follow',
             )
 @method_decorator(name='post',decorator=swagger_auto_schema(manual_parameters=[action_parameter]))
-class UserFollowView(APIView):
+class UserActionView(APIView):
     permission_classes = [IsAuthenticated]
     def post(self,request,*args,**kwargs):
         user_id = kwargs.get('user_id')
@@ -64,6 +64,10 @@ class UserFollowView(APIView):
                 UserFollow.objects.get_or_create(following_user=user,follower_user=current_user)
             elif action == 'unfollow':
                 UserFollow.objects.filter(following_user=user,follower_user=current_user).delete()
+            elif action == 'block':
+                BlockUser.objects.get_or_create(blocked_by=current_user,blocked_user=user)
+            elif action == 'unblock':
+                BlockUser.objects.filter(blocked_by=current_user,blocked_user=user).delete()
             else:
                 return Response({'message':'Invalid action'},status=400)
             return Response({'message': f'You successfully {action}ed'},status=200)
@@ -84,14 +88,18 @@ class UserPostsView(ListAPIView):
 
 class UserSuggestionsView(APIView):
     def get(self, request):
-        most_following_users = User.objects.annotate(num_followers=Count('following')).order_by('-num_followers')[:5]
+        blocked_users = set()
+        user = request.user
+        if not user.is_anonymous:
+            blocked_users = set(map(lambda x:x['blocked_user'],user.blocked_by_users.all().values('blocked_user')))
+        most_following_users = User.objects.exclude(pk__in=blocked_users).annotate(num_followers=Count('following')).order_by('-num_followers')[:5]
 
         
-        most_liked_posts_owners= Post.objects.annotate(num_likes=Count('likes')).order_by('-num_likes')[:5].values('owner')
+        most_liked_posts_owners= Post.objects.exclude(owner__pk__in=blocked_users).annotate(num_likes=Count('likes')).order_by('-num_likes')[:5].values('owner')
         most_liked_users = set([get_object_or_404(User,pk=post['owner']) for post in most_liked_posts_owners])
 
 
-        most_commented_posts_owners= Post.objects.annotate(num_comments=Count('comments')).order_by('-num_comments')[:5].values('owner')
+        most_commented_posts_owners= Post.objects.exclude(owner__pk__in=blocked_users).annotate(num_comments=Count('comments')).order_by('-num_comments')[:5].values('owner')
         most_commented_users = set([get_object_or_404(User,pk=post['owner']) for post in most_commented_posts_owners])
         
        
